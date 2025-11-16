@@ -33,7 +33,9 @@ def test_capsule_required_fields() -> None:
 
     # Missing required field should raise TypeError
     with pytest.raises(TypeError):
-        Capsule(name="Missing ID", version="1.0.0", domain_type="test")  
+        Capsule(name="Missing ID", version="1.0.0", domain_type="test")
+
+
 # type: ignore
 
 
@@ -124,4 +126,6 @@ def test_capsule_roundtrip() -> None:
     assert restored.version == original.version
     assert restored.domain_type == original.domain_type
     assert restored.author == original.author
+
+
 # flake8: noqa: F821
