@@ -10,7 +10,7 @@ app = typer.Typer(
 )
 
 
-def version_callback(value: bool):
+def version_callback(value: bool) -> None:
     """Display version information"""
     if value:
         typer.echo(f"Obsidian Capsule CLI v{__version__}")
@@ -27,7 +27,7 @@ def main(
         is_eager=True,
         help="Show version and exit",
     ),
-):
+) -> None:
     """
         Obsidian Capsule Delivery System
 
